@@ -1,0 +1,11 @@
+#~/.screenlayout/desk.layout.sh
+xcompmgr &
+if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+  /usr/lib/openbox/gnome-settings-daemon &
+elif which gnome-settings-daemon >/dev/null; then
+  gnome-settings-daemon &
+fi
+#/home/micah/bin/mkd.py -d &     # media keys
+nitrogen --restore &            # background
+conky &                         # system monitor
+tint2 &                         # panel
